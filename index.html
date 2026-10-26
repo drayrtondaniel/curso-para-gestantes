@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>52º Curso de Gestantes para Casais | DoVentre — Campinas/SP</title>
-    <meta name="description" content="Curso presencial de gestantes para casais em Campinas/SP. Aulas práticas, equipe multidisciplinar (obstetra, enfermeira, pediatra, psicóloga, fisio, nutri, osteopata). Vagas limitadas!">
+    <meta name="description" content="Curso presencial de gestantes para casais em Campinas/SP. Aulas práticas, equipe multidisciplinar, preparo humanizado para o parto e pós-parto. Vagas limitadas!">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +29,7 @@
             --cream: #f2efe9;
             --champagne: #c9b896;
             --champagne-light: #e8e0d5;
+            --orange-vibrant: #e85a24;
             --charcoal: #2c2c2c;
             --charcoal-light: #4a4a4a;
             --white: #ffffff;
@@ -44,7 +45,6 @@
             --border-subtle: 1px solid rgba(201, 184, 150, 0.25);
             
             --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            --transition-fade: opacity 0.5s ease, transform 0.5s ease;
             --touch-target-min: 56px;
         }
 
@@ -109,24 +109,33 @@
         .section { padding: var(--space-xl) 0; }
         .section-title { text-align: center; margin-bottom: var(--space-lg); }
 
-        /* Banner Fixo Superior */
+        /* Alerta Fixo Superior */
         .ethical-banner {
-            background: var(--cream);
-            border-bottom: var(--border-subtle);
-            padding: var(--space-xs) 0;
+            background: var(--orange-vibrant);
+            color: var(--white);
+            padding: 0.6rem var(--space-sm);
             text-align: center;
-            font-size: 0.85rem;
-            color: var(--sage-deep);
+            font-size: 0.9rem;
+            font-weight: 500;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 10px rgba(232, 90, 36, 0.2);
+        }
+
+        .ethical-banner span {
+            text-transform: uppercase;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 2px;
+            margin-right: 6px;
+            font-size: 0.8rem;
         }
 
         /* Header Hero */
         header {
             background: linear-gradient(180deg, var(--offwhite) 0%, var(--cream) 100%);
             padding: var(--space-lg) 0 var(--space-xl);
-            position: relative;
             text-align: center;
         }
 
@@ -161,8 +170,9 @@
 
         .brand-name span { color: var(--champagne); font-style: italic; }
 
-        .hero-text p {
+        .hero-text {
             font-size: 1.1rem;
+            max-width: 720px;
             margin: 0 auto var(--space-md);
             color: var(--charcoal-light);
         }
@@ -179,35 +189,7 @@
             max-width: 65ch;
         }
 
-        .hero-benefits {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-sm);
-            margin-top: var(--space-md);
-            text-align: left;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-xs);
-            font-size: 0.95rem;
-            color: var(--charcoal-light);
-        }
-
-        .benefit-item::before {
-            content: '';
-            min-width: 6px;
-            height: 6px;
-            background: var(--champagne);
-            border-radius: 50%;
-            margin-top: 0.5rem;
-        }
-
-        /* Mosaico de Fotos em Galeria */
+        /* Mosaico / Galeria de Fotos */
         .mosaic-section {
             background: var(--white);
             padding: var(--space-lg) 0;
@@ -237,9 +219,7 @@
             transition: var(--transition-smooth);
         }
 
-        .mosaic-item:hover img {
-            transform: scale(1.04);
-        }
+        .mosaic-item:hover img { transform: scale(1.04); }
 
         .mosaic-caption {
             position: absolute;
@@ -253,115 +233,14 @@
             text-align: center;
         }
 
-        /* Onboarding / Quiz */
-        .onboarding-section {
-            background: var(--offwhite);
-            position: relative;
-        }
-
-        .onboarding-container {
-            max-width: 720px;
-            margin: 0 auto;
-            background: var(--white);
-            border-radius: 2px;
-            padding: var(--space-lg);
-            box-shadow: var(--shadow-subtle);
-            border: var(--border-subtle);
-        }
-
-        .progress-indicator {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: var(--space-lg);
-            position: relative;
-            padding: 0 var(--space-sm);
-        }
-
-        .progress-indicator::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 8%;
-            right: 8%;
-            height: 1px;
-            background: var(--champagne-light);
-            transform: translateY(-50%);
-        }
-
-        .progress-step {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            background: var(--offwhite);
-            border: 1px solid var(--champagne-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            color: var(--sage-medium);
-            position: relative;
-            z-index: 1;
-        }
-
-        .progress-step.active {
-            background: var(--sage-deep);
-            border-color: var(--sage-deep);
-            color: var(--offwhite);
-        }
-
-        .question-step { display: none; }
-        .question-step.active { display: block; }
-
-        .options-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-md);
-        }
-
-        .option-card {
-            background: var(--offwhite);
-            border: var(--border-subtle);
-            border-radius: 2px;
-            padding: var(--space-md);
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-        }
-
-        .option-card:hover, .option-card.selected {
-            border-color: var(--sage-deep);
-            background: rgba(74, 93, 82, 0.04);
-        }
-
-        .btn-nav, .btn-submit {
-            padding: 0.9rem 2rem;
-            border-radius: 2px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            border: none;
-        }
-
-        .btn-submit {
-            background: var(--sage-deep);
-            color: var(--offwhite);
-            width: 100%;
-        }
-
-        .btn-submit:hover { background: var(--sage-medium); }
-
-        /* Roteiro / Módulos */
+        /* Roteiro / Módulos Detalhados */
         .roteiro-section { background: var(--cream); }
 
         .roteiro-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: var(--space-md);
+            margin-top: var(--space-md);
         }
 
         .roteiro-card {
@@ -370,6 +249,14 @@
             border-radius: 2px;
             box-shadow: var(--shadow-subtle);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+        }
+
+        .roteiro-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-elevated);
         }
 
         .roteiro-header {
@@ -378,33 +265,93 @@
             padding: var(--space-sm) var(--space-md);
         }
 
-        .roteiro-body { padding: var(--space-md); }
+        .roteiro-date {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+        }
+
+        .roteiro-time {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .roteiro-body {
+            padding: var(--space-md);
+            flex-grow: 1;
+        }
 
         .topic-item {
-            margin-bottom: var(--space-sm);
-            padding-bottom: var(--space-xs);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
             border-bottom: 1px dashed rgba(201, 184, 150, 0.4);
         }
 
-        .topic-title { font-weight: 500; color: var(--charcoal); font-size: 0.95rem; }
-        .topic-speaker { font-size: 0.82rem; color: var(--sage-deep); font-style: italic; }
-
-        /* CTA e Botões */
-        .btn-primary {
-            background: var(--champagne);
-            color: var(--charcoal);
-            padding: 1rem 2.2rem;
-            border-radius: 2px;
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-sm);
-            transition: var(--transition-smooth);
+        .topic-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
-        .btn-primary:hover { background: #d4c8ab; }
+        .topic-title {
+            font-weight: 500;
+            color: var(--charcoal);
+            font-size: 0.98rem;
+            margin-bottom: 2px;
+        }
 
+        .topic-speaker {
+            font-size: 0.82rem;
+            color: var(--sage-deep);
+            font-style: italic;
+            display: inline-block;
+            background: rgba(74, 93, 82, 0.06);
+            padding: 2px 8px;
+            border-radius: 2px;
+            margin-bottom: 4px;
+        }
+
+        .topic-desc {
+            font-size: 0.9rem;
+            color: var(--charcoal-light);
+            margin-top: 4px;
+        }
+
+        /* Depoimentos */
+        .testimonials-section { background: var(--white); }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .testimonial-card {
+            background: var(--offwhite);
+            border-radius: 2px;
+            padding: var(--space-md);
+            box-shadow: var(--shadow-subtle);
+            border-left: 3px solid var(--champagne);
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            color: var(--charcoal-light);
+            margin-bottom: var(--space-sm);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            font-weight: 500;
+            color: var(--sage-deep);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-handle {
+            color: var(--sage-light);
+            font-size: 0.82rem;
+        }
+
+        /* CTA Final */
         .cta-section {
             background: linear-gradient(180deg, var(--sage-deep) 0%, #3a4a42 100%);
             color: var(--offwhite);
@@ -414,22 +361,76 @@
 
         .cta-title { color: var(--offwhite); }
 
-        /* Footer */
+        .btn-primary {
+            background: var(--orange-vibrant);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 16px rgba(232, 90, 36, 0.25);
+            min-height: var(--touch-target-min);
+            margin-top: var(--space-md);
+        }
+
+        .btn-primary:hover { background: #d24e1d; transform: translateY(-1px); }
+
+        /* Footer Uniforme e Centralizado */
         footer {
             background: var(--charcoal);
             color: rgba(255, 255, 255, 0.75);
             text-align: center;
             padding: var(--space-lg) 0 var(--space-md);
             font-size: 0.9rem;
+            font-weight: 300;
         }
 
         .footer-container {
             max-width: 700px;
             margin: 0 auto;
+            padding: 0 var(--space-md);
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             gap: var(--space-xs);
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            margin-bottom: var(--space-xs);
+            color: var(--white);
+        }
+
+        .footer-brand span { color: var(--champagne); font-style: italic; }
+
+        .footer-credentials {
+            margin: 0;
+            opacity: 0.9;
+            text-align: center;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: var(--space-xs);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .copyright {
+            margin-top: var(--space-sm);
+            padding-top: var(--space-sm);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            opacity: 0.7;
+            width: 100%;
+            text-align: center;
         }
 
         @media (max-width: 992px) {
@@ -437,16 +438,15 @@
         }
 
         @media (max-width: 768px) {
-            .hero-benefits { grid-template-columns: 1fr; }
             .mosaic-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Banner Fixo -->
+    <!-- Alerta Superior de Vagas -->
     <div class="ethical-banner">
-        52º Curso de Gestantes para Casais • Aulas Práticas e Presenciais em Campinas/SP
+        <span>Últimas Vagas</span> 52º Curso de Gestantes para Casais • Novembro de 2025 (Presencial em Campinas/SP)[cite: 3, 4]
     </div>
 
     <!-- Header Hero -->
@@ -457,17 +457,10 @@
                 <div class="brand-name">DoVentre <span>& Círculo Nascer</span></div>
             </div>
             <h1>52º Curso de Gestantes para Casais</h1>
-            <p class="hero-text">Uma jornada prática, científica e acolhedora para preparar gestantes e acompanhantes para o parto, pós-parto e os primeiros cuidados com o bebê.</p>
+            <p class="hero-text">Uma imersão completa e multidisciplinar para preparar o casal com segurança, embasamento científico e total acolhimento para a chegada do bebê.</p>
             
             <div class="hero-highlight">
-                Idealizado em parceria com a equipe do Círculo Nascer e os melhores especialistas de Campinas, oferecendo tranquilidade e segurança técnica para decisões conscientes.
-            </div>
-
-            <div class="hero-benefits">
-                <div class="benefit-item">Treinamento prático de banho, trocas e amamentação</div>
-                <div class="benefit-item">Preparo ativo do acompanhante para o trabalho de parto</div>
-                <div class="benefit-item">Visão multidisciplinar (Obstetra, Pediatra, Fisioterapeuta, Nutri, Psicóloga)</div>
-                <div class="benefit-item">Turmas reduzidas para acolhimento personalizado</div>
+                Abordagem humanizada voltada para o protagonismo da família, unindo medicina baseada em evidências, práticas corporais e suporte emocional ativo para o parto e pós-parto.
             </div>
         </div>
     </header>
@@ -476,165 +469,205 @@
     <section class="section mosaic-section">
         <div class="container">
             <div class="section-title">
-                <h2>Experiência Presencial e Prática</h2>
-                <p>Confira a estrutura e a dinâmica dos nossos encontros no DoVentre</p>
+                <h2>Vivência Prática e Acolhimento</h2>
+                <p>Conheça a nossa estrutura de encontros presenciais no Espaço DoVentre</p>
             </div>
 
             <div class="mosaic-grid">
                 <div class="mosaic-item">
-                    <img src="curso_1.jpg" alt="Aulas Práticas para Casais">
-                    <div class="mosaic-caption">Aulas Práticas com Bebês</div>
+                    <img src="curso_1.jpg" alt="Aulas Práticas">
+                    <div class="mosaic-caption">Aulas Práticas com Recém-Nascidos</div>
                 </div>
                 <div class="mosaic-item">
-                    <img src="curso_2.jpg" alt="Acompanhante no Parto">
-                    <div class="mosaic-caption">Apoio ao Acompanhante</div>
+                    <img src="curso_2.jpg" alt="Preparo do Casal">
+                    <div class="mosaic-caption">Participação Ativa do Acompanhante</div>
                 </div>
                 <div class="mosaic-item">
-                    <img src="curso_3.jpg" alt="Preparo Amamentação">
-                    <div class="mosaic-caption">Consultoria em Amamentação</div>
+                    <img src="curso_3.jpg" alt="Amamentação">
+                    <div class="mosaic-caption">Orientações de Aleitamento</div>
                 </div>
                 <div class="mosaic-item">
-                    <img src="curso_4.jpg" alt="Ambiente Acolhedor DoVentre">
-                    <div class="mosaic-caption">Espaço DoVentre — Campinas</div>
+                    <img src="curso_4.jpg" alt="Espaço DoVentre">
+                    <div class="mosaic-caption">Espaço DoVentre — Jardim Planalto</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Onboarding / Triagem do Casal -->
-    <section class="section onboarding-section">
+    <!-- Roteiro Detalhado com Enfoque Prático e Humanizado -->
+    <section class="section roteiro-section" id="roteiro">
         <div class="container">
             <div class="section-title">
-                <h2>Encontre o preparo ideal para seu momento</h2>
-            </div>
-
-            <div class="onboarding-container">
-                <div class="progress-indicator">
-                    <div class="progress-step active">1</div>
-                    <div class="progress-step">2</div>
-                </div>
-
-                <div class="question-step active" id="step1">
-                    <h3 class="serif" style="text-align: center; margin-bottom: var(--space-md);">Em qual semana de gestação vocês estão?</h3>
-                    <div class="options-grid">
-                        <div class="option-card" onclick="selectOption(this)">Até 20 semanas (Início da jornada)</div>
-                        <div class="option-card" onclick="selectOption(this)">21 a 32 semanas (Momento ideal para o curso)</div>
-                        <div class="option-card" onclick="selectOption(this)">33 semanas ou mais (Reta final)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Programação Roteiro -->
-    <section class="section roteiro-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Roteiro Completo das Aulas</h2>
-                <p>Novembro | Sábados das 13h30 às 18h00</p>
+                <h2>Nosso Roteiro Detalhado</h2>
+                <p>Sábados, das 13h30 às 18h00 — Novembro[cite: 4, 7]</p>
             </div>
 
             <div class="roteiro-grid">
+                <!-- 01/11 -->
                 <div class="roteiro-card">
                     <div class="roteiro-header">
-                        <strong>1º Sábado — 01/11</strong>
+                        <div class="roteiro-date">1º Sábado — 01/11</div>
+                        <div class="roteiro-time">13h30 às 18h00[cite: 7]</div>
                     </div>
                     <div class="roteiro-body">
                         <div class="topic-item">
-                            <div class="topic-title">De olho no Pré-Natal adequado</div>
-                            <span class="topic-speaker">Médico Obstetra</span>
+                            <span class="topic-speaker">Médico Obstetra[cite: 7]</span>
+                            <div class="topic-title">De olho em um Pré-Natal adequado</div>
+                            <p class="topic-desc">Diretrizes essenciais para garantir um acompanhamento clínico seguro, preventivo e pautado na escuta qualificada.</p>
                         </div>
                         <div class="topic-item">
+                            <span class="topic-speaker">Fisioterapeuta[cite: 7]</span>
                             <div class="topic-title">Benefícios da gestação ativa</div>
-                            <span class="topic-speaker">Fisioterapeuta</span>
+                            <p class="topic-desc">Exercícios focados em mobilidade pélvica, alívio de dores lombares e preparo corporal para o parto.</p>
                         </div>
                         <div class="topic-item">
-                            <div class="topic-title">Nutrição na gestação e pós-parto</div>
-                            <span class="topic-speaker">Nutricionista</span>
+                            <span class="topic-speaker">Nutricionista[cite: 7]</span>
+                            <div class="topic-title">Alimentação para gestantes e puérperas</div>
+                            <p class="topic-desc">Guia prático nutricional para sustentar a energia da gestação e otimizar a recuperação pós-parto.</p>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-speaker">Cordcell & Vacinesim[cite: 7]</span>
+                            <div class="topic-title">Células-tronco e Calendário Vacinal</div>
+                            <p class="topic-desc">Informações cruciais sobre medicina regenerativa e proteção imunológica para a mãe e o bebê.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- 08/11 -->
                 <div class="roteiro-card">
                     <div class="roteiro-header">
-                        <strong>2º Sábado — 08/11</strong>
+                        <div class="roteiro-date">2º Sábado — 08/11</div>
+                        <div class="roteiro-time">13h30 às 18h00[cite: 7]</div>
                     </div>
                     <div class="roteiro-body">
                         <div class="topic-item">
+                            <span class="topic-speaker">Médico Obstetra[cite: 7]</span>
                             <div class="topic-title">Mecanismos do trabalho de parto</div>
-                            <span class="topic-speaker">Médico Obstetra</span>
+                            <p class="topic-desc">Compreensão fisiológica profunda de como o corpo conduz o nascimento de forma natural e segura.</p>
                         </div>
                         <div class="topic-item">
-                            <div class="topic-title">Técnicas de alívio da dor</div>
-                            <span class="topic-speaker">Enf. Obstetra</span>
+                            <span class="topic-speaker">Enf. Obstetra[cite: 7]</span>
+                            <div class="topic-title">Técnicas naturais para lidar com a dor</div>
+                            <p class="topic-desc">Uso de hidroterapia, massagens e posturas ativas que respeitam o ritmo do corpo.</p>
                         </div>
                         <div class="topic-item">
-                            <div class="topic-title">Anestesia e Recepção do Bebê</div>
-                            <span class="topic-speaker">Anestesista / Pediatra</span>
+                            <span class="topic-speaker">Médico Anestesista[cite: 7]</span>
+                            <div class="topic-title">Anestesias no trabalho de parto</div>
+                            <p class="topic-desc">Esclarecimentos transparentes sobre opções de analgesia e suporte anestésico humanizado.</p>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-speaker">Médico Pediatra[cite: 7]</span>
+                            <div class="topic-title">A recepção do bebê na sala humanizada</div>
+                            <p class="topic-desc">Como ocorre a transição suave, clampeamento oportuno e o contato pele a pele imediato.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- 15/11 -->
                 <div class="roteiro-card">
                     <div class="roteiro-header">
-                        <strong>3º Sábado — 15/11</strong>
+                        <div class="topic-speaker" style="background:transparent; color:#fff; padding:0; font-style:normal;">3º Sábado — 15/11</div>
+                        <div class="roteiro-date" style="font-size:1.25rem;">O Papel do Acompanhante</div>
+                        <div class="roteiro-time">13h30 às 18h00[cite: 7]</div>
                     </div>
                     <div class="roteiro-body">
                         <div class="topic-item">
-                            <div class="topic-title">O papel do Acompanhante</div>
-                            <span class="topic-speaker">Enf. Obstetra</span>
+                            <span class="topic-speaker">Enf. Obstetra[cite: 7]</span>
+                            <div class="topic-title">O acompanhante ativo no parto</div>
+                            <p class="topic-desc">Estratégias práticas para que o parceiro seja um verdadeiro porto seguro e suporte emocional.</p>
                         </div>
                         <div class="topic-item">
-                            <div class="topic-title">Puerpério & Emoções da Gestação</div>
-                            <span class="topic-speaker">Obstetra / Psicóloga</span>
+                            <span class="topic-speaker">Médico Obstetra[cite: 7]</span>
+                            <div class="topic-title">Puerpério à vista: O que esperar?</div>
+                            <p class="topic-desc">Preparação realista para a "quarta fase" e as transformações intensas do pós-parto.</p>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-speaker">Psicóloga[cite: 7]</span>
+                            <div class="topic-title">Emoções da gestação e parentalidade</div>
+                            <p class="topic-desc">Acolhimento da saúde mental, medos comuns e construção conjunta da nova dinâmica familiar.</p>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-speaker">Osteopata[cite: 7]</span>
+                            <div class="topic-title">Osteopatia para gestantes e bebês</div>
+                            <p class="topic-desc">Alívio de sobrecargas biomecânicas corporais na gestação e suporte inicial ao recém-nascido.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- 22/11 -->
                 <div class="roteiro-card">
                     <div class="roteiro-header">
-                        <strong>4º Sábado — 22/11</strong>
+                        <div class="roteiro-date">4º Sábado — 22/11</div>
+                        <div class="roteiro-time">13h30 às 18h00[cite: 7]</div>
                     </div>
                     <div class="roteiro-body">
                         <div class="topic-item">
-                            <div class="topic-title">Cuidados práticos com o bebê (Banho/Cordão)</div>
-                            <span class="topic-speaker">Enf. Obstetra</span>
+                            <span class="topic-speaker">Enf. Obstetra[cite: 7]</span>
+                            <div class="topic-title">Cuidados práticos (Banho, Fralda, Cordão)</div>
+                            <p class="topic-desc">Treinamento prático intensivo em manequins para os pais ganharem total segurança nos primeiros dias em casa.</p>
                         </div>
                         <div class="topic-item">
-                            <div class="topic-title">Tudo sobre Amamentação</div>
-                            <span class="topic-speaker">Consultora em Aleitamento</span>
+                            <span class="topic-speaker">Consultora em Aleitamento[cite: 7]</span>
+                            <div class="topic-title">Tudo sobre Aleitamento Materno</div>
+                            <p class="topic-desc">Técnicas de pega correta, prevenção de fissuras e estabelecimento tranquilo da amamentação.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Reais -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Relatos de Casais Participantes</h2>
+                <p>Histórias reais de quem vivenciou a preparação DoVentre</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"O curso foi um ponto muito importante durante a gestação. Além de nos informar sobre esse momento de tantas mudanças, foi um espaço acolhedor para expor medos e ansiedades. Nos sentimos preparados para o que estava por vir!"</p>
+                    <div class="testimonial-author">Mila Rinaldi</div>
+                    <div class="testimonial-handle">@milarinaldi[cite: 5]</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Muito bom esse curso! Fez toda a diferença pra mim na gestação. Me senti muito mais segura para o parto e o pós-parto. Recomendo a todos os casais, principalmente os de primeira viagem!"</p>
+                    <div class="testimonial-author">Natália Siconha</div>
+                    <div class="testimonial-handle">@nataliasiconha[cite: 5]</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Final -->
-    <section class="cta-section">
+    <section class="section cta-section">
         <div class="container">
             <h2 class="cta-title serif">Garanta a vaga do seu casal</h2>
-            <p>Turmas reduzidas para preservar o cuidado individualizado e o treinamento prático de cada casal.</p>
+            <p style="margin: 0 auto var(--space-md); max-width: 600px; opacity: 0.9;">Turmas intencionalmente reduzidas para preservar o acolhimento, a troca de experiências e a qualidade das aulas práticas.</p>
             <a href="https://wa.me/5519996602397?text=Olá!%20Gostaria%20de%20garantir%20minha%20vaga%20no%20Curso%20de%20Gestantes" target="_blank" class="btn-primary">
-                Inscrever-se pelo WhatsApp
+                Inscrever-se pelo WhatsApp (19) 99660-2397[cite: 6]
             </a>
         </div>
     </section>
 
-    <!-- Footer Alinhado -->
+    <!-- Footer Unificado e Alinhado -->
     <footer>
         <div class="footer-container">
-            <div class="footer-brand">DoVentre & Círculo Nascer</div>
-            <p>R. Dr. José Ferreira Camargo, 677 — Jardim Planalto, Campinas - SP</p>
-            <p>&copy; 2026 DoVentre. Todos os direitos reservados.</p>
+            <div class="footer-brand">DoVentre <span>& Círculo Nascer</span></div>
+            <p class="footer-credentials">Espaço de Apoio à Gestação e Maternidade</p>
+            <p class="footer-credentials">R. Dr. José Ferreira Camargo, 677 — Jardim Planalto, Campinas - SP[cite: 6]</p>
+            
+            <p class="footer-disclaimer">
+                O curso de gestantes é uma ferramenta educacional e preventiva de apoio à família, complementando o acompanhamento médico obstétrico com embasamento científico e visão humanizada.
+            </p>
+            
+            <div class="copyright">
+                &copy; 2026 DoVentre. Todos os direitos reservados.
+            </div>
         </div>
     </footer>
 
-    <script>
-        function selectOption(element) {
-            document.querySelectorAll('.option-card').forEach(card => card.classList.remove('selected'));
-            element.classList.add('selected');
-        }
-    </script>
 </body>
 </html>
