@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>52º Curso de Gestantes para Casais | DoVentre — Campinas/SP</title>
+    <meta name="description" content="Curso presencial de gestantes para casais em Campinas/SP. Aulas práticas, equipe multidisciplinar (obstetra, enfermeira, pediatra, psicóloga, fisio, nutri, osteopata). Vagas limitadas!">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Analytics: Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-DOVENTRE');
+    </script>
+
+    <style>
+        :root {
+            --sage-deep: #4a5d52;
+            --sage-medium: #6b7f75;
+            --sage-light: #a8b8b0;
+            --offwhite: #faf9f6;
+            --cream: #f2efe9;
+            --champagne: #c9b896;
+            --champagne-light: #e8e0d5;
+            --orange-vibrant: #e85a24;
+            --orange-soft: #f27242;
+            --charcoal: #2c2c2c;
+            --charcoal-light: #4a4a4a;
+            --white: #ffffff;
+            
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+            
+            --shadow-subtle: 0 2px 12px rgba(74, 93, 82, 0.08);
+            --shadow-elevated: 0 8px 30px rgba(74, 93, 82, 0.12);
+            --border-subtle: 1px solid rgba(201, 184, 150, 0.25);
+            
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --touch-target-min: 56px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: var(--charcoal-light);
+            line-height: 1.75;
+            background-color: var(--offwhite);
+            background-image: 
+                radial-gradient(ellipse at top, rgba(168, 184, 176, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom right, rgba(201, 184, 150, 0.04) 0%, transparent 50%);
+            overflow-x: hidden;
+        }
+
+        /* Tipografia */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            color: var(--charcoal);
+            line-height: 1.25;
+            margin-bottom: var(--space-sm);
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            position: relative;
+            padding-bottom: var(--space-sm);
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 48px;
+            height: 2px;
+            background: var(--champagne);
+        }
+
+        p { margin-bottom: var(--space-sm); font-weight: 300; }
+
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .section { padding: var(--space-xl) 0; }
+        .section-title { text-align: center; margin-bottom: var(--space-lg); }
+
+        /* Top Bar Alerta de Vagas */
+        .top-alert {
+            background: var(--orange-vibrant);
+            color: var(--white);
+            text-align: center;
+            padding: 0.6rem var(--space-sm);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(232, 90, 36, 0.2);
+        }
+
+        .top-alert span {
+            text-transform: uppercase;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 2px;
+            margin-right: 6px;
+            font-size: 0.8rem;
+        }
+
+        /* Header Hero */
+        header {
+            background: linear-gradient(180deg, var(--offwhite) 0%, var(--cream) 100%);
+            padding: var(--space-lg) 0 var(--space-xl);
+            position: relative;
+            text-align: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+
+        .brand-mark {
+            width: 52px;
+            height: 52px;
+            border: 1px solid var(--champagne);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sage-deep);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            background: var(--white);
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--charcoal);
+            letter-spacing: 0.05em;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(74, 93, 82, 0.08);
+            border: 1px solid var(--sage-light);
+            color: var(--sage-deep);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            max-width: 720px;
+            margin: 0 auto var(--space-md);
+            color: var(--charcoal-light);
+        }
+
+        .hero-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--space-sm);
+            max-width: 900px;
+            margin: var(--space-md) auto 0;
+            text-align: left;
+        }
+
+        .hero-detail-card {
+            background: var(--white);
+            border: var(--border-subtle);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: 2px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .hero-detail-card strong {
+            display: block;
+            color: var(--sage-deep);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 2px;
+        }
+
+        .hero-detail-card span {
+            color: var(--charcoal);
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        /* Botões */
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-xs);
+            background: var(--sage-deep);
+            color: var(--white);
+            padding: 1.1rem 2.4rem;
+            border-radius: 2px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+            min-height: var(--touch-target-min);
+            box-shadow: 0 4px 16px rgba(74, 93, 82, 0.2);
+            margin-top: var(--space-md);
+        }
+
+        .btn-cta:hover {
+            background: var(--sage-medium);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 93, 82, 0.25);
+        }
+
+        .btn-orange {
+            background: var(--orange-vibrant);
+            box-shadow: 0 4px 16px rgba(232, 90, 36, 0.25);
+        }
+
+        .btn-orange:hover {
+            background: var(--orange-soft);
+            box-shadow: 0 6px 20px rgba(232, 90, 36, 0.35);
+        }
+
+        /* Seção Roteiro / Módulos */
+        .roteiro-section { background: var(--white); }
+
+        .roteiro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+
+        .roteiro-card {
+            background: var(--offwhite);
+            border: var(--border-subtle);
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .roteiro-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-elevated);
+            border-color: var(--champagne);
+        }
+
+        .roteiro-header {
+            background: var(--sage-deep);
+            color: var(--white);
+            padding: var(--space-sm) var(--space-md);
+        }
+
+        .roteiro-date {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .roteiro-time {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .roteiro-body {
+            padding: var(--space-md);
+            flex-grow: 1;
+        }
+
+        .topic-item {
+            margin-bottom: var(--space-sm);
+            padding-bottom: var(--space-xs);
+            border-bottom: 1px dashed rgba(201, 184, 150, 0.4);
+        }
+
+        .topic-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .topic-title {
+            font-weight: 500;
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            line-height: 1.35;
+            margin-bottom: 2px;
+        }
+
+        .topic-speaker {
+            font-size: 0.82rem;
+            color: var(--sage-deep);
+            font-style: italic;
+            display: inline-block;
+            background: rgba(74, 93, 82, 0.06);
+            padding: 1px 8px;
+            border-radius: 2px;
+        }
+
+        /* Seção Depoimentos */
+        .testimonials-section { background: var(--cream); }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 2px;
+            padding: var(--space-md);
+            box-shadow: var(--shadow-subtle);
+            border-left: 3px solid var(--champagne);
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            color: var(--charcoal-light);
+            margin-bottom: var(--space-sm);
+            font-size: 0.98rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-weight: 500;
+            color: var(--sage-deep);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-handle {
+            color: var(--sage-light);
+            font-size: 0.82rem;
+            font-weight: 300;
+        }
+
+        /* Seção Localização e Diferenciais */
+        .info-section { background: var(--offwhite); }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+
+        .info-box {
+            background: var(--white);
+            padding: var(--space-md);
+            border-radius: 2px;
+            border: var(--border-subtle);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .info-list {
+            list-style: none;
+            margin-top: var(--space-sm);
+        }
+
+        .info-list li {
+            padding: var(--space-xs) 0;
+            padding-left: var(--space-md);
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .info-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--sage-deep);
+            font-weight: bold;
+        }
+
+        /* CTA Final */
+        .cta-final {
+            background: linear-gradient(180deg, var(--sage-deep) 0%, #3a4a42 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-final h2 { color: var(--white); }
+        .cta-final h2::after { background: var(--champagne); }
+        .cta-final p { color: rgba(255,255,255,0.9); margin: 0 auto var(--space-md); max-width: 600px; }
+
+        /* Footer Alinhado */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+            padding: var(--space-lg) 0 var(--space-sm);
+            font-size: 0.85rem;
+        }
+
+        .footer-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .hero-details-grid { grid-template-columns: 1fr 1fr; }
+            .btn-cta { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Alert -->
+    <div class="top-alert">
+        <span>Vagas Limitadas</span> 52º Curso de Gestantes para Casais — Faça sua inscrição
+    </div>
+
+    <!-- Header Hero -->
+    <header>
+        <div class="container">
+            <div class="brand">
+                <div class="brand-mark">DV</div>
+                <div class="brand-name">DoVentre</div>
+            </div>
+            
+            <span class="hero-badge">Aulas Práticas & Presenciais</span>
+            <h1>52º Curso de Gestantes para Casais</h1>
+            <p class="hero-subtitle">Uma preparação completa, humanizada e multidisciplinar para a chegada do seu bebê. Conteúdo prático para gestantes e acompanhantes.</p>
+
+            <div class="hero-details-grid">
+                <div class="hero-detail-card">
+                    <strong>Formato</strong>
+                    <span>4 Encontros Presenciais</span>
+                </div>
+                <div class="hero-detail-card">
+                    <strong>Horário</strong>
+                    <span>Sábados, 13h30 às 18h</span>
+                </div>
+                <div class="hero-detail-card">
+                    <strong>Equipe</strong>
+                    <span>8 Especialistas</span>
+                </div>
+                <div class="hero-detail-card">
+                    <strong>Local</strong>
+                    <span>Jardim Planalto, Campinas/SP</span>
+                </div>
+            </div>
+
+            <a href="https://wa.me/5519996602397?text=Olá!%20Gostaria%20de%20garantir%20minha%20vaga%20no%20Curso%20de%20Gestantes" target="_blank" class="btn-cta btn-orange">
+                Garantir minha vaga pelo WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Roteiro das Aulas -->
+    <section class="section roteiro-section" id="roteiro">
+        <div class="container">
+            <div class="section-title">
+                <h2>Programação do Roteiro</h2>
+                <p>Módulos estruturados para cobrir todas as etapas da gestação, parto e pós-parto</p>
+            </div>
+
+            <div class="roteiro-grid">
+                <!-- Encontro 1 -->
+                <div class="roteiro-card">
+                    <div class="roteiro-header">
+                        <div class="roteiro-date">1º Sábado — 01/11</div>
+                        <div class="roteiro-time">13h30 às 18h00</div>
+                    </div>
+                    <div class="roteiro-body">
+                        <div class="topic-item">
+                            <div class="topic-title">De olho em um Pré-Natal adequado</div>
+                            <span class="topic-speaker">Médico Obstetra</span>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-title">Benefícios da gestação ativa</div>
+                            <span class="topic-speaker">Fisioterapeuta</span>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-title">Dicas de alimentação para gestantes e puérperas</div>
+                            <span class="topic-speaker">Nutricionista</span>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-title">Células-tronco do sangue do cordão umbilical</div>
+                            <span class="topic-speaker">Cordcell</span>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-title">Calendário de vacinas para grávidas e bebês</div>
+                            <span class="topic-speaker">Vacinesim</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Encontro 2 -->
+                <div class="roteiro-card">
+                    <div class="roteiro-header">
+                        <div class="roteiro-date">2º Sábado — 08/11</div>
+                        <div class="roteiro-time">13h30 às 18h00</div>
+                    </div>
+                    <div class="roteiro-body">
+                        <div class="topic-item">
+                            <div class="topic-title">Mecanismos do trabalho de parto</div>
+                            <span class="topic-speaker">Médico Obstetra</span>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-title">Técnicas naturais para lidar com a dor no parto</div>
+                            <span class="topic-speaker">Enf. Obstetra</span>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-title">Anestesias para o trabalho de parto e nascimento</div>
+                            <span class="topic-speaker">Médico Anestesista</span>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-title">Rotina da recepção do bebê na sala de parto humanizada</div>
+                            <span class="topic-speaker">Médico Pediatra</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Encontro 3 -->
+                <div class="roteiro-card">
+                    <div class="roteiro-header">
+                        <div class="roteiro-date">3º Sábado — 15/11</div>
+                        <div class="roteiro-time">13h30 às 18h00</div>
+                    </div>
+                    <div class="roteiro-body">
+                        <div class="topic-item">
+                            <div class="topic-title">O importante papel do acompanhante no trabalho de parto</div>
+                            <span class="topic-speaker">Enf. Obstetra</span>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-title">Atenção! Puerpério à vista: O que você deve saber?</div>
+                            <span class="topic-speaker">Médico Obstetra</span>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-title">Lidando com as emoções da gestação e do pós-parto</div>
+                            <span class="topic-speaker">Psicóloga</span>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-title">Osteopatia preventiva e terapêutica para gestantes e bebês</div>
+                            <span class="topic-speaker">Osteopata</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Encontro 4 -->
+                <div class="roteiro-card">
+                    <div class="roteiro-header">
+                        <div class="roteiro-date">4º Sábado — 22/11</div>
+                        <div class="roteiro-time">13h30 às 18h00</div>
+                    </div>
+                    <div class="roteiro-body">
+                        <div class="topic-item">
+                            <div class="topic-title">Cuidados básicos com seu bebê: fralda, cordão, banho (aula prática)</div>
+                            <span class="topic-speaker">Enf. Obstetra</span>
+                        </div>
+                        <div class="topic-item">
+                            <div class="topic-title">Tudo sobre aleitamento materno — O que você precisa saber!</div>
+                            <span class="topic-speaker">Enf. Aconselhadora em Aleitamento</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos de Casais -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>O que dizem os casais</h2>
+                <p>Relatos de quem vivenciou a experiência DoVentre</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"O curso foi um ponto muito importante durante a gestação. Além de nos informar sobre esse momento onde acontecem tantas mudanças, foi um momento acolhedor para que pudéssemos expor nossos medos e ansiedade. Nos sentimos bem preparados!"</p>
+                    <div class="testimonial-author">
+                        <span>Mila Rinaldi</span>
+                        <span class="testimonial-handle">@milarinaldi</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Muito bom esse curso! Fez toda a diferença pra mim na minha gestação! Me senti muito mais preparada e segura para o parto e o pós-parto. Recomendo a todos os casais gestantes, principalmente os de primeira viagem!"</p>
+                    <div class="testimonial-author">
+                        <span>Natália Siconha</span>
+                        <span class="testimonial-handle">@nataliasiconha</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização & Informações -->
+    <section class="section info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div>
+                    <h2>Por que participar do Curso DoVentre?</h2>
+                    <p>O curso prepara o casal de forma integrada para o nascimento e os primeiros dias do bebê com embasamento científico e prática real.</p>
+                    <ul class="info-list">
+                        <li>Equipe multidisciplinar altamente qualificada</li>
+                        <li>Aulas práticas de banho, trocas e amamentação</li>
+                        <li>Foco no protagonismo da mulher e no apoio do parceiro</li>
+                        <li>Ambiente acolhedor para tirar todas as dúvidas</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3 class="serif">Local das Aulas Presenciais</h3>
+                    <p><strong>Espaço DoVentre</strong></p>
+                    <p>R. Dr. José Ferreira Camargo, 677<br>Jardim Planalto — Campinas / SP</p>
+                    <br>
+                    <p><strong>Contato e Reservas:</strong><br>(19) 99660-2397</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="section cta-final">
+        <div class="container">
+            <h2>Ganta a sua vaga no 52º Curso</h2>
+            <p>As vagas são estritamente limitadas para garantir a qualidade das aulas práticas e a interação com cada casal.</p>
+            <a href="https://wa.me/5519996602397?text=Olá!%20Quero%20inscrever%20meu%20casal%20no%20Curso%20de%20Gestantes" target="_blank" class="btn-cta btn-orange">
+                Inscrever-se pelo WhatsApp agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">DoVentre</div>
+            <p>Espaço de Apoio à Gestação e Maternidade • Campinas/SP</p>
+            <p>&copy; 2026 DoVentre. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
