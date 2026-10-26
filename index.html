@@ -6,25 +6,158 @@
     <title>53º Curso de Gestantes para Casais | DoVentre — Campinas/SP</title>
     <meta name="description" content="Curso presencial de gestantes para casais em Campinas/SP. Capacitação prática, repertório para o plano de parto e acolhimento humanizado. Fevereiro de 2026. Vagas limitadas!">
     
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     
+    <!-- Analytics: Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-DOVENTRE');
+    </script>
+
     <style>
-        /* [MANTENHA O CSS ANTERIOR AQUI - PARA ECONOMIZAR ESPAÇO, VOU INCLUIR APENAS OS NOVOS ESTILOS] */
+        :root {
+            /* Paleta Círculo Nascer / DoVentre */
+            --sage-deep: #4a5d52;
+            --sage-medium: #6b7f75;
+            --sage-light: #a8b8b0;
+            --offwhite: #faf9f6;
+            --cream: #f2efe9;
+            --champagne: #c9b896;
+            --champagne-light: #e8e0d5;
+            --charcoal: #2c2c2c;
+            --charcoal-light: #4a4a4a;
+            --white: #ffffff;
+            --orange-accent: #e85a24; /* Mantido para CTA */
+            
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+            
+            --shadow-subtle: 0 2px 12px rgba(74, 93, 82, 0.08);
+            --shadow-elevated: 0 8px 30px rgba(74, 93, 82, 0.12);
+            --border-subtle: 1px solid rgba(201, 184, 150, 0.25);
+            
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --touch-target-min: 56px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: var(--charcoal-light);
+            line-height: 1.75;
+            background-color: var(--offwhite);
+            background-image: 
+                radial-gradient(ellipse at top, rgba(168, 184, 176, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom right, rgba(201, 184, 150, 0.04) 0%, transparent 50%);
+            overflow-x: hidden;
+        }
+
+        /* Tipografia */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            color: var(--charcoal);
+            line-height: 1.25;
+            margin-bottom: var(--space-sm);
+        }
+
+        h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 400; letter-spacing: -0.02em; }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); position: relative; padding-bottom: var(--space-sm); }
+        h2::after {
+            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 48px; height: 2px; background: var(--champagne);
+        }
+
+        p { margin-bottom: var(--space-sm); font-weight: 300; max-width: 65ch; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--space-md); }
+        .section { padding: var(--space-xl) 0; }
+        .section-title { text-align: center; margin-bottom: var(--space-lg); }
+
+        /* Alerta Fixo Superior */
+        .ethical-banner {
+            background: var(--cream);
+            border-bottom: var(--border-subtle);
+            padding: 0.6rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--sage-deep);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .ethical-banner span { font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* Header Hero com Fundo Temático */
+        header {
+            position: relative;
+            background: linear-gradient(135deg, #2b3d33 0%, #4a5d52 50%, #6b7f75 100%);
+            padding: var(--space-xl) 0;
+            text-align: center;
+            overflow: hidden;
+            color: var(--white);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -20%;
+            width: 140%; height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(201, 184, 150, 0.15) 0%, transparent 60%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -10%; right: -10%;
+            width: 400px; height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .header-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+
+        .brand { display: flex; align-items: center; justify-content: center; gap: var(--space-sm); margin-bottom: var(--space-md); }
+        .brand-mark {
+            width: 56px; height: 56px; border: 1px solid var(--champagne); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; color: var(--champagne);
+            font-family: 'Playfair Display', serif; font-size: 1.4rem; background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(4px);
+        }
+        .brand-name { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--white); letter-spacing: 0.05em; }
+
+        header h1 { color: var(--white); margin-top: var(--space-md); }
+        .hero-text { color: rgba(255,255,255,0.9); font-size: 1.15rem; max-width: 700px; margin: 0 auto var(--space-md); }
         
-        /* ... (Cole aqui todo o bloco <style> da versão anterior) ... */
-        
-        /* Novos Estilos para a Seção de Valor e Roteiro Enriquecido */
-        .value-section { background: var(--white); padding: var(--space-xl) 0; }
-        
+        .hero-highlight {
+            border-left: 2px solid var(--champagne); margin: var(--space-md) auto; font-style: italic;
+            color: var(--champagne-light); background: rgba(255, 255, 255, 0.1); padding: var(--space-sm) var(--space-md);
+            border-radius: 0 8px 8px 0; text-align: left; max-width: 65ch; backdrop-filter: blur(5px);
+        }
+
+        /* Seção de Valor (O que você leva) */
+        .value-section { background: var(--white); }
         .value-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: var(--space-md);
             margin-top: var(--space-md);
         }
-        
         .value-card {
             background: var(--offwhite);
             border-radius: 2px;
@@ -33,12 +166,7 @@
             box-shadow: var(--shadow-subtle);
             transition: var(--transition-smooth);
         }
-        
-        .value-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-elevated);
-        }
-        
+        .value-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-elevated); }
         .value-card h4 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
@@ -46,14 +174,28 @@
             color: var(--sage-deep);
             margin-bottom: var(--space-xs);
         }
-        
-        .value-card p {
-            font-size: 0.95rem;
-            color: var(--charcoal-light);
-            line-height: 1.6;
-        }
+        .value-card p { font-size: 0.95rem; color: var(--charcoal-light); line-height: 1.6; }
 
-        /* Pequeno ajuste nos cards do roteiro para destacar o "repertório" */
+        /* Roteiro */
+        .roteiro-section { background: var(--cream); }
+        .roteiro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-md); margin-top: var(--space-md); }
+        .roteiro-card {
+            background: var(--white); border: var(--border-subtle); border-radius: 2px;
+            box-shadow: var(--shadow-subtle); overflow: hidden; display: flex; flex-direction: column;
+            transition: var(--transition-smooth); border-top: 3px solid var(--sage-deep);
+        }
+        .roteiro-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-elevated); }
+        .roteiro-header { background: var(--offwhite); color: var(--sage-deep); padding: var(--space-sm) var(--space-md); border-bottom: 1px solid var(--border-subtle); }
+        .roteiro-date { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; }
+        .roteiro-time { font-size: 0.85rem; font-weight: 500; opacity: 0.8; }
+        .roteiro-body { padding: var(--space-md); flex-grow: 1; }
+        .topic-item { margin-bottom: var(--space-md); padding-bottom: var(--space-sm); border-bottom: 1px dashed rgba(201, 184, 150, 0.4); }
+        .topic-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .topic-title { font-weight: 500; color: var(--charcoal); font-size: 0.98rem; margin-bottom: 2px; }
+        .topic-speaker { font-size: 0.82rem; color: var(--sage-medium); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 4px; }
+        .topic-desc { font-size: 0.9rem; color: var(--charcoal-light); margin-top: 4px; }
+        
+        /* Repertório Prático */
         .topic-repertoire {
             display: block;
             margin-top: var(--space-xs);
@@ -64,14 +206,65 @@
             border-radius: 2px;
             border-left: 2px solid var(--sage-light);
         }
-        
         .topic-repertoire strong { font-weight: 600; color: var(--sage-deep); }
+
+        /* Sobre o Idealizador */
+        .doctor-section { background: var(--white); }
+        .doctor-container { display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-lg); align-items: center; }
+        .doctor-portrait {
+            position: relative; border-radius: 2px; overflow: hidden;
+            background: linear-gradient(135deg, var(--sage-light), var(--cream));
+            aspect-ratio: 4/5; border: var(--border-subtle); box-shadow: var(--shadow-elevated);
+        }
+        .doctor-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .doctor-content h2 { margin-bottom: var(--space-md); }
+        .doctor-credentials { list-style: none; margin: var(--space-md) 0; border-left: 2px solid var(--champagne-light); padding-left: var(--space-md); }
+        .doctor-credentials li { padding: var(--space-xs) 0; font-weight: 300; color: var(--charcoal-light); }
+        .doctor-credentials li strong { color: var(--charcoal); font-weight: 500; }
+
+        /* Depoimentos */
+        .testimonials-section { background: var(--offwhite); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-md); }
+        .testimonial-card { background: var(--white); border-radius: 2px; padding: var(--space-md); box-shadow: var(--shadow-subtle); border-left: 2px solid var(--champagne); }
+        .testimonial-quote { font-style: italic; color: var(--charcoal-light); margin-bottom: var(--space-sm); font-size: 0.95rem; }
+        .testimonial-author { font-weight: 500; color: var(--sage-deep); font-size: 0.9rem; }
+
+        /* CTA Final */
+        .cta-section {
+            background: linear-gradient(180deg, var(--sage-deep) 0%, #3a4a42 100%);
+            color: var(--offwhite); text-align: center; padding: var(--space-xl) 0;
+        }
+        .cta-title { color: var(--offwhite); }
+        .btn-primary {
+            background: var(--orange-accent); color: var(--white); padding: 1rem 2.5rem;
+            border-radius: 2px; text-decoration: none; font-weight: 500; display: inline-flex;
+            align-items: center; gap: var(--space-sm); transition: var(--transition-smooth);
+            box-shadow: 0 4px 16px rgba(232, 90, 36, 0.25); min-height: var(--touch-target-min);
+            margin-top: var(--space-md);
+        }
+        .btn-primary:hover { background: #d24e1d; transform: translateY(-1px); }
+
+        /* Footer */
+        footer { background: var(--charcoal); color: rgba(255, 255, 255, 0.75); text-align: center; padding: var(--space-lg) 0 var(--space-md); font-size: 0.9rem; }
+        .footer-container { max-width: 700px; margin: 0 auto; padding: 0 var(--space-md); display: flex; flex-direction: column; align-items: center; gap: var(--space-xs); }
+        .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: var(--space-xs); color: var(--white); }
+        .footer-credentials { margin: 0; opacity: 0.9; text-align: center; }
+        .footer-disclaimer { font-size: 0.8rem; opacity: 0.7; margin-top: var(--space-xs); line-height: 1.6; text-align: center; }
+        .copyright { margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.85rem; opacity: 0.7; width: 100%; text-align: center; }
+
+        @media (max-width: 992px) { 
+            .doctor-container { grid-template-columns: 1fr; text-align: center; }
+            .doctor-credentials { border-left: none; padding-left: 0; border-top: 2px solid var(--champagne-light); padding-top: var(--space-md); text-align: left;}
+            .doctor-portrait { max-width: 400px; margin: 0 auto; }
+        }
+        @media (max-width: 768px) { 
+            .value-grid, .roteiro-grid, .testimonials-grid { grid-template-columns: 1fr; } 
+        }
     </style>
 </head>
 <body>
 
-    <!-- [MANTENHA O BANNER E HEADER ANTERIORES] -->
-    
+    <!-- Banner de Vagas -->
     <div class="ethical-banner">
         <span>Vagas Limitadas</span> 53º Curso de Gestantes para Casais • Fevereiro de 2026 • Presencial em Campinas/SP
     </div>
@@ -94,7 +287,7 @@
         </div>
     </header>
 
-    <!-- NOVA SEÇÃO: O QUE VOCÊ LEVA (A Caixa de Ferramentas) -->
+    <!-- NOVA SEÇÃO: O Que Você Leva -->
     <section class="section value-section">
         <div class="container">
             <div class="section-title">
@@ -123,7 +316,7 @@
         </div>
     </section>
 
-    <!-- ROTEIRO ENRIQUECIDO -->
+    <!-- Roteiro Enriquecido -->
     <section class="section roteiro-section" id="roteiro">
         <div class="container">
             <div class="section-title">
@@ -259,7 +452,63 @@
         </div>
     </section>
 
-    <!-- [MANTENHA AS SEÇÕES DO MÉDICO, DEPOIMENTOS, CTA E FOOTER ANTERIORES] -->
+    <!-- Sobre o Idealizador -->
+    <section class="section doctor-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Idealização e Curadoria</h2>
+                <p>Um projeto colaborativo que reúne diferentes especialistas em torno de um cuidado humanizado</p>
+            </div>
+            <div class="doctor-container">
+                <div class="doctor-portrait">
+                    <!-- Foto do Dr. Ayrton na raiz do repositório -->
+                    <img src="dr_ayrton.png" alt="Dr. Ayrton Daniel Ribeiro Filho">
+                </div>
+                <div class="doctor-content">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-style: italic; margin-bottom: var(--space-sm);">Dr. Ayrton Daniel</h3>
+                    <p>O curso é um projeto idealizado e curado pelo Dr. Ayrton Daniel, que reuniu uma equipe de profissionais qualificados e com um olhar alinhado à verdadeira humanização do parto. Cada especialista contribui com sua expertise, criando um ambiente colaborativo e acolhedor para os casais.</p>
+                    
+                    <ul class="doctor-credentials">
+                        <li><strong>Formação:</strong> Graduação pela UFRJ; residência, mestrado e doutorado pela Unicamp</li>
+                        <li><strong>Visão integrativa:</strong> Pós-doutorado em Psicologia Analítica Junguiana e formação em Medicina Antroposófica</li>
+                        <li><strong>Experiência:</strong> Mais de 30 anos dedicados à obstetrícia e ao cuidado humanizado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</body>
-</html>
+    <!-- Depoimentos -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Gratidão em Palavras</h2>
+                <p>Experiências reais, momentos únicos de quem vivenciou a preparação DoVentre</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Foi transformador entender melhor o papel do acompanhante no parto. Meu parceiro saiu mais preparado e confiante!"</p>
+                    <div class="testimonial-author">— Juliana M.</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Nunca imaginei que aprender sobre o puerpério faria tanta diferença. Me sinto acolhida e pronta para essa fase."</p>
+                    <div class="testimonial-author">— Camila T.</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"As dicas de alimentação e os cuidados com o bebê me deixaram muito mais segura. Amei cada momento!"</p>
+                    <div class="testimonial-author">— Renata C.</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"A aula prática de cuidados com o bebê foi essencial. Agora sei como dar banho e trocar fralda sem medo!"</p>
+                    <div class="testimonial-author">— Patrícia L.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="section cta-section">
+        <div class="container">
+            <h2 class="cta-title serif">Porque cada detalhe importa na chegada do seu bebê.</h2>
+            <p style="margin: 0 auto var(--space-md); max-width: 
